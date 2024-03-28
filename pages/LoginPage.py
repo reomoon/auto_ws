@@ -1,6 +1,5 @@
-from base.BasePage import BasePage
-import pages.PageElements as pe
-
+from lib.env import BasePage
+import lib.PageElements as pe
 
 class LoginPage(BasePage):
     def __init__(self, driver, context):

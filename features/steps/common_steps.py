@@ -1,14 +1,14 @@
 from selenium import webdriver
-from base.BasePage import BasePage
+from lib.env import BasePage
 from pages.LoginPage import LoginPage
 from pages.OrderPage import OrderPage
-import config.config as config
+import lib.config as config
 from behave import given
 import time
 @given('Chrome 브라우저로 FashionGo 사이트 접속')
 def step_impl(context):
     context.driver = webdriver.Chrome()
-    context.driver.get(config.BASE_URL)
+    context.driver.get(config.Dev_URL)
     context.driver.maximize_window()
     time.sleep(3)
 
